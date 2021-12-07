@@ -14,20 +14,19 @@ showModalBtn.addEventListener("click", () => {
   backdrop.style.display = "block";
 });
 
-closeBtn.addEventListener("click", () => {
+function closeModal() {
   modal.style.opacity = "0";
   modal.style.transform = "translateY(-100vh)";
   backdrop.style.display = "none";
-});
+}
 
-backdrop.addEventListener("click", () => {
-  modal.style.opacity = "0";
-  modal.style.transform = "translateY(-100vh)";
-  backdrop.style.display = "none";
-});
+closeBtn.addEventListener("click", closeModal);
+
+backdrop.addEventListener("click", closeModal);
 
 confirmBtn.addEventListener("click", () => {
   modal.style.opacity = "0";
   modal.style.transform = "translateY(-100vh)";
   backdrop.style.display = "none";
+  alert("hi again =)");
 });
